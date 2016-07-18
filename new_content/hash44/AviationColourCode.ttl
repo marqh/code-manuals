@@ -1,0 +1,59 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<AviationColourCode>
+        a skos:Collection ;
+        rdfs:label "Aviation Colour Code"@en ;
+        dct:description "ICAO Annex 3/WMO No. 49-2 Appendix 2 Table A2-1"@en ;
+	skos:member <AviationColourCode/RED> ,
+		    <AviationColourCode/ORANGE> ,
+		    <AviationColourCode/YELLOW> ,
+		    <AviationColourCode/GREEN> ,
+		    <AviationColourCode/UNKNOWN> ,
+		    <AviationColourCode/NOT_GIVEN> ,
+		    <AviationColourCode/NIL> .
+
+
+<AviationColourCode/RED>
+	a skos:Concept ;
+	rdfs:label "Red"@en ;
+	dct:description "Red"@en ;
+	skos:notation "RED" .
+
+<AviationColourCode/ORANGE>
+	a skos:Concept ;
+	rdfs:label "Orange"@en ;
+	dct:description "Orange"@en ;
+	skos:notation "ORANGE" .
+
+<AviationColourCode/YELLOW>
+	a skos:Concept ;
+	rdfs:label "Yellow"@en ;
+	dct:description "Yellow"@en ;
+	skos:notation "YELLOW" .
+
+<AviationColourCode/GREEN>
+	a skos:Concept ;
+	rdfs:label "Green"@en ;
+	dct:description "Green"@en ;
+	skos:notation "GREEN" .
+
+<AviationColourCode/UNKNOWN>
+	a skos:Concept ;
+	rdfs:label "Unknown"@en ;
+	dct:description "Unknown"@en ;
+	skos:notation "UNKNOWN" .
+
+<AviationColourCode/NOT_GIVEN>
+	a skos:Concept ;
+	rdfs:label "Not Given"@en ;
+	dct:description "Not Given"@en ;
+	skos:notation "NOT GIVEN" .
+
+<AviationColourCode/NIL>
+	a skos:Concept ;
+	rdfs:label "Nil"@en ;
+	dct:description "Nil"@en ;
+	skos:notation "NIL" .

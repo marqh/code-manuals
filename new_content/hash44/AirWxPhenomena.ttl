@@ -1,0 +1,139 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<AirWxPhenomena>
+        a skos:Collection ;
+        rdfs:label ""@en ;
+        dct:description ""@en ;
+	skos:member <AirWxPhenomena/SFC_WIND> ,
+	            <AirWxPhenomena/SFC_VIS> ,
+		    <AirWxPhenomena/ISOL_TS> ,
+		    <AirWxPhenomena/OCNL_TS> ,
+		    <AirWxPhenomena/ISOL_TSGR> ,
+		    <AirWxPhenomena/OCNL_TSGR> ,
+		    <AirWxPhenomena/MT_OBSC> ,
+		    <AirWxPhenomena/BKN_CLD> ,
+		    <AirWxPhenomena/OVC_CLD> ,
+		    <AirWxPhenomena/ISOL_CB> ,
+		    <AirWxPhenomena/OCNL_CB> ,
+		    <AirWxPhenomena/FRQ_CB> ,
+		    <AirWxPhenomena/ISOL_TCU> ,
+		    <AirWxPhenomena/OCNL_TCU> ,
+		    <AirWxPhenomena/FRQ_TCU> ,
+		    <AirWxPhenomena/MOD_ICE> ,
+		    <AirWxPhenomena/MOD_TURB> ,
+		    <AirWxPhenomena/MOD_MTW> .
+
+
+
+<AirWxPhenomena/SFC_WIND>
+	a skos:Concept ;
+	rdfs:label "Widespread mean surface wind"@en ;
+	dct:description "Widespread mean surface wind"@en ;
+	skos:notation "SFC WIND nn[n]MPS" .
+
+<AirWxPhenomena/SFC_VIS>
+	a skos:Concept ;
+	rdfs:label "Surface visibility"@en ;
+	dct:description "Surface visibility"@en ;
+	skos:notation "SFC VIS nnnnM (mm)" .
+
+<AirWxPhenomena/ISOL_TS>
+	a skos:Concept ;
+	rdfs:label "Isolated thunderstorms"@en ;
+	dct:description "Isolated thunderstorms"@en ;
+	skos:notation "ISOL TS" .
+
+<AirWxPhenomena/OCNL_TS>
+	a skos:Concept ;
+	rdfs:label "OCNL TS"@en ;
+	dct:description "Occasional thunderstorms"@en ;
+	skos:notation "Occasional thunderstorms" .
+
+
+<AirWxPhenomena/ISOL_TSGR>
+	a skos:Concept ;
+	rdfs:label "Isolated thunderstorms with hail"@en ;
+	dct:description "Isolated thunderstorms with hail"@en ;
+	skos:notation "ISOL TSGR" .
+
+<AirWxPhenomena/OCNL_TSGR>
+	a skos:Concept ;
+	rdfs:label "Occasional thunderstorms with hail"@en ;
+	dct:description "Occasional thunderstorms with hail"@en ;
+	skos:notation "OCNL TSGR" .
+
+<AirWxPhenomena/MT_OBSC>
+	a skos:Concept ;
+	rdfs:label "Mountain obscuration"@en ;
+	dct:description "Mountain obscuration"@en ;
+	skos:notation "MT OBSC" .
+
+<AirWxPhenomena/BKN_CLD>
+	a skos:Concept ;
+	rdfs:label "Broken cloud"@en ;
+	dct:description "Broken cloud"@en ;
+	skos:notation "BKN CLD" .
+
+<AirWxPhenomena/OVC_CLD>
+	a skos:Concept ;
+	rdfs:label "Overcast cloud"@en ;
+	dct:description "Overcast cloud"@en ;
+	skos:notation "OVC CLD" .
+
+<AirWxPhenomena/ISOL_CB>
+	a skos:Concept ;
+	rdfs:label "Isolated cumulonimbus cloud"@en ;
+	dct:description "Isolated cumulonimbus cloud"@en ;
+	skos:notation "ISOL CB" .
+
+<AirWxPhenomena/OCNL_CB>
+	a skos:Concept ;
+	rdfs:label "Occasional cumulonimbus cloud"@en ;
+	dct:description "Occasional cumulonimbus cloud"@en ;
+	skos:notation "OCNL CB" .
+
+<AirWxPhenomena/FRQ_CB> 
+	a skos:Concept ;
+	rdfs:label "Frequent cumulonimbus cloud"@en ;
+	dct:description "Frequent cumulonimbus cloud"@en ;
+	skos:notation "FRQ CB" .
+
+<AirWxPhenomena/ISOL_TCU>
+	a skos:Concept ;
+	rdfs:label "Isolated towering cumulus cloud"@en ;
+	dct:description "Isolated towering cumulus cloud"@en ;
+	skos:notation "ISOL TCU" .
+
+<AirWxPhenomena/OCNL_TCU>
+	a skos:Concept ;
+	rdfs:label "Occasional towering cumulus cloud"@en ;
+	dct:description "Occasional towering cumulus cloud"@en ;
+	skos:notation "OCNL TCU" .
+
+<AirWxPhenomena/FRQ_TCU> 
+	a skos:Concept ;
+	rdfs:label "Frequent towering cumulus cloud"@en ;
+	dct:description "Frequent towering cumulus cloud"@en ;
+	skos:notation "FRQ TCU" .
+
+<AirWxPhenomena/MOD_ICE> 
+	a skos:Concept ;
+	rdfs:label "Moderate icing"@en ;
+	dct:description "Moderate icing"@en ;
+	skos:notation "MOD ICE" .
+
+<AirWxPhenomena/MOD_TURB>
+	a skos:Concept ;
+	rdfs:label "Moderate turbulence"@en ;
+	dct:description "Moderate turbulence"@en ;
+	skos:notation "MOD TURB" .
+
+<AirWxPhenomena/MOD_MTW> 
+	a skos:Concept ;
+	rdfs:label "Moderate mountain wave"@en ;
+	dct:description "Moderate mountain wave"@en ;
+	skos:notation "MOD MTW" .
+
