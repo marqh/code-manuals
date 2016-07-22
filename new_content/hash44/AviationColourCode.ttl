@@ -5,8 +5,8 @@
 
 <AviationColourCode>
         a skos:Collection ;
-        rdfs:label "Aviation Colour Code"@en ;
-        dct:description "ICAO Annex 3/WMO No. 49-2 Appendix 2 Table A2-1"@en ;
+        rdfs:label "Volcanic Aviation Colour Code"@en ;
+        dct:description "Volcanic Aviation Colour Code ICAO Annex 15"@en ;
 	skos:member <AviationColourCode/RED> ,
 		    <AviationColourCode/ORANGE> ,
 		    <AviationColourCode/YELLOW> ,
@@ -19,25 +19,25 @@
 <AviationColourCode/RED>
 	a skos:Concept ;
 	rdfs:label "Red"@en ;
-	dct:description "Red"@en ;
+	dct:description "Eruption is forecasted to be imminent with significant emission of ash into the atmosphere likely. Or, eruption is underway with significant emission of ash into the atmosphere [specify ash-plume height if possible]."@en ;
 	skos:notation "RED" .
 
 <AviationColourCode/ORANGE>
 	a skos:Concept ;
 	rdfs:label "Orange"@en ;
-	dct:description "Orange"@en ;
+	dct:description "Volcano is exhibiting heightened unrest with increased likelihood of eruption.  Or, volcanic eruption is underway with no or minor ash emission [specify ash-plume height if possible]."@en ;
 	skos:notation "ORANGE" .
 
 <AviationColourCode/YELLOW>
 	a skos:Concept ;
 	rdfs:label "Yellow"@en ;
-	dct:description "Yellow"@en ;
+	dct:description "Volcano is experiencing signs of elevated unrest above known background levels. Or, after a change from higher alert level: Volcanic activity has decreased significantly but continues to be closely monitored for possible renewed increase."@en ;
 	skos:notation "YELLOW" .
 
 <AviationColourCode/GREEN>
 	a skos:Concept ;
 	rdfs:label "Green"@en ;
-	dct:description "Green"@en ;
+	dct:description "Volcano is in normal, non-eruptive state.  Or, after a change from a higher alert level: Volcanic activity considered to have ceased, and volcano reverted to its normal, non-eruptive state."@en ;
 	skos:notation "GREEN" .
 
 <AviationColourCode/UNKNOWN>
