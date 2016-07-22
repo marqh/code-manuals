@@ -5,8 +5,8 @@
 
 <AirWxPhenomena>
         a skos:Collection ;
-        rdfs:label ""@en ;
-        dct:description ""@en ;
+        rdfs:label "Air Wx Phenomena"@en ;
+        dct:description "ICAO Annex 3/ WMO No. 49-2 Appendix 6 Section 2.1"@en ;
 	skos:member <AirWxPhenomena/SFC_WIND> ,
 	            <AirWxPhenomena/SFC_VIS> ,
 		    <AirWxPhenomena/ISOL_TS> ,
