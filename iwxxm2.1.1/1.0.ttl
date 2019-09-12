@@ -1,0 +1,75 @@
+@prefix grib2-core: <http://codes.wmo.int/grib2/schema/core/> .
+@prefix grib2-parameter: <http://codes.wmo.int/grib2/schema/parameter/> .
+@prefix ssd:   <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dgu:   <http://reference.data.gov.uk/def/reference/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix qudt-quantity: <http://qudt.org/vocab/quantity#> .
+@prefix common-core: <http://codes.wmo.int/common/schema/core/> .
+@prefix qudt:  <http://qudt.org/schema/qudt#> .
+@prefix version: <http://purl.org/linked-data/version#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix qudt-dimension: <http://qudt.org/vocab/dimension#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix api:   <http://purl.org/linked-data/api/vocab#> .
+@prefix ui:    <http://purl.org/linked-data/registry-ui#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix bufr4-core: <http://codes.wmo.int/bufr4/schema/core/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix qudt-unit: <http://qudt.org/vocab/unit#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix reg:   <http://purl.org/linked-data/registry#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix common-unit: <http://codes.wmo.int/common/schema/unit/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc:    <http://creativecommons.org/ns#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+
+<1.0/MeteorologicalAerodromeObservation>
+        a                skos:Concept ;
+        rdfs:label       "MeteorologicalAerodromeObservation"@en ;
+        rdfs:seeAlso     <http://codes.wmo.int/common/observation-type/METCE/2013/ComplexSamplingMeasurement> ;
+        dct:description  "MeteorologicalAerodromeObservation (a subclass of ComplexSamplingMeasurement from METCE) is intended for use when reporting an aggregate set of observed meteorological conditions at an aerodrome. The result of this observation type shall refer to an entity of type MeteorologicalAerodromeObservationRecord. MeteorologicalAerodromeObservation enforces the following additional constraints: ‘featureOfInterest’ shall refer to an entity of type SF_SamplingPoint and the associated ‘sampledFeature’ must be an Aerodrome. MeteorologicalAerodromeObservation has a peer class for forecast information at an aerodrome: MeteorologicalAerodromeTrendForecast."@en .
+
+<1.0/MeteorologicalAerodromeForecast>
+        a                skos:Concept ;
+        rdfs:label       "MeteorologicalAerodromeForecast"@en ;
+        rdfs:seeAlso     <http://codes.wmo.int/common/observation-type/METCE/2013/ComplexSamplingMeasurement> ;
+        dct:description  "MeteorologicalAerodromeForecast (a subclass of ComplexSamplingMeasurement from METCE) is intended for use when reporting an aggregate set of forecast meteorological conditions at an aerodrome. The result of this observation type shall refer to an entity of type MeteorologicalAerodromeForecastRecord. MeteorologicalAerodromeForecast enforces the following additional constraints: ‘featureOfInterest’ shall refer to an entity of type SF_SamplingPoint and the associated ‘sampledFeature’ must be an Aerodrome. This class is also related but not identical to MeteorologicalAerodromeTrendForecast which is reported on a METAR/SPECI - conditions reported in trend forecasts in METAR/SPECI differ from forecast groups in a TAF. The TAF forecast group from/to variants (FM, TL, AT, etc.) are represented on the OM_Observation validTime, which is always an instance of TM_Period. When there is only an instant at which a condition occurs, the start and end time are the same."@en .
+
+<1.0>
+        a                        ldp:Container , reg:Register , skos:Collection ;
+        rdfs:label               "Code Table D-4: IWXXM observation types" ;
+        dct:description          "The items within this code table are specialized observation or measurement types defined within the ICAO Meteorological Information Exchange Model (IWXXM). Each observation or measurement type listed herein is specified as a class in IWXXM that derives from the OM_Observation class (defined in ISO 19156, Geographic information - Observations and measurements, clause 6.2) or sub-class thereof."@en ;
+        dct:modified             "2014-09-03T09:42:03.919Z"^^xsd:dateTime ;
+        dct:publisher            <http://codes.wmo.int/system/organization/wmo> ;
+        reg:containedItemClass   skos:Concept ;
+        reg:manager              <http://codes.wmo.int/system/organization/www-dm> ;
+        reg:owner                <http://codes.wmo.int/system/organization/wmo> ;
+        owl:versionInfo          2 ;
+        skos:member              <1.0/MeteorologicalAerodromeTrendForecast> , <1.0/MeteorologicalAerodromeForecast> , <1.0/SIGMETPositionAnalysis> , <1.0/MeteorologicalAerodromeObservation> , <1.0/SIGMETEvolvingConditionAnalysis> ;
+        skos:notation            "D-4" ;
+        ldp:membershipPredicate  skos:member .
+
+<1.0/MeteorologicalAerodromeTrendForecast>
+        a                skos:Concept ;
+        rdfs:label       "MeteorologicalAerodromeTrendForecast"@en ;
+        rdfs:seeAlso     <http://codes.wmo.int/common/observation-type/METCE/2013/ComplexSamplingMeasurement> ;
+        dct:description  "MeteorologicalAerodromeTrendForecast (a subclass of ComplexSamplingMeasurement from METCE) is intended for use when reporting an aggregate set of forecast meteorological conditions at an aerodrome. The result of this observation type shall refer to an entity of type MeteorologicalAerodromeTrendForecastRecord. MeteorologicalAerodromeTrendForecast enforces the following additional constraints: ‘featureOfInterest’ shall refer to an entity of type SF_SamplingPoint and the associated ‘sampledFeature’ must be an aerodrome. MeteorologicalAerodromeTrendForecasts are reported in surface observation reports such as SPECI and METAR. MeteorologicalAerodromeTrendForecast has a peer class for observation information at an aerodrome (MeteorologicalAerodromeObservation) which is also reported on a METAR and SPECI for observed phenomena. This class is also related but not identical to MeteorologicalAerodromeForecast which is reported on a TAF - conditions reported in trend forecasts in METAR/SPECI differ from forecast groups in a TAF."@en .
+
+<1.0/SIGMETPositionAnalysis>
+        a                skos:Concept ;
+        rdfs:label       "SIGMETPositionAnalysis"@en ;
+        rdfs:seeAlso     <http://codes.wmo.int/common/observation-type/METCE/2013/SamplingObservation> ;
+        dct:description  "SIGMETPositionAnalysis (a subclass of SamplingObservation from METCE) is intended for use when reporting the forecast position of meteorological conditions hazardous to flight. The result of this observation type shall refer to one or more MeteorologicalPositions which represents the forecast positions of SIGMET phenomena. SIGMETPositionAnalysis enforces the following additional constraints: ‘featureOfInterest’ shall refer to an entity of type SF_SamplingSurface and the associated ‘sampledFeature’ must be an airspace."@en .
+
+<1.0/SIGMETEvolvingConditionAnalysis>
+        a                skos:Concept ;
+        rdfs:label       "SIGMETEvolvingConditionAnalysis"@en ;
+        rdfs:seeAlso     <http://codes.wmo.int/common/observation-type/METCE/2013/SamplingObservation> ;
+        dct:description  "SIGMETEvolvingConditionAnalysis (a subclass of SamplingObservation from METCE) is intended for use when reporting an observed or forecast aggregate set of meteorological conditions hazardous to flight over a large airspace, including anticipated intensity change plus speed and direction of motion. The result of this observation type shall refer to a single EvolvingMeteorologicalCondition which represents a SIGMET observation or forecast of meteorological conditions. SIGMETEvolvingConditionAnalysis enforces the following additional constraints: ‘featureOfInterest’ shall refer to an entity of type SF_SamplingSurface and the associated ‘sampledFeature’ must be an airspace."@en .
